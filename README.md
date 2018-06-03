@@ -18,11 +18,13 @@ Workshop attendees will work through several exercises and get first-hand experi
 
 ## Schedule
 
-9 - 10:30  - morning 1  
-10:10 - 11 - :coffee: break  
-11 - 12:30 - morning 2  
-12:30 - 2  - :fork_and_knife: lunch  
-2 - 3:30   - afternoon 1  
-3:30 - 4   - :coffee: break  
-4 - 5      - afternoon 2  
+| Time          | Activity               |
+|:--------------|:-----------------------|
+| 9:00 - 10:30  | morning 1              |  
+| 10:10 - 11:00 | break :coffee:         |       
+| 11:00 - 12:30 | morning 2              |  
+| 12:30 - 2:00  | lunch :fork_and_knife: |               
+| 2:00 - 3:30   | afternoon 1            |    
+| 3:30 - 4:00   | break :coffee:         |       
+| 4:00 - 5:00   | afternoon 2            |    
 
