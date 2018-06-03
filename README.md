@@ -1,6 +1,6 @@
 # Reproducible Computing
 
-Short-course at [ISBA 2018](https://bayesian.org/isba2018/Short-Courses/) . 
+Short-course at [ISBA 2018](https://bayesian.org/isba2018/Short-Courses/)  
 2018-06-24  
 9am - 5pm
 
