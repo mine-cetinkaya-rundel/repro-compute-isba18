@@ -82,7 +82,24 @@ your research more reproducible.
 - Live demo of solution to exercise
 - Q&A
 
+## Instructors
+
+**[Mine Cetinkaya-Rundel](http://www2.stat.duke.edu/~mc301/)** - Duke University + RStudio
+
+Mine is an Associate Professor of the Practice of Statistical Science at Duke 
+University and a Professional Educator at RStudio. Her work focuses on 
+innovation in statistics and data science pedagogy, with an emphasis on computation, reproducible research, open-source education, and student-centered 
+learning. She is the author of three open-source introductory statistics 
+textbooks as part of the OpenIntro project and teaches the popular Statistics 
+with R MOOC on Coursera.
+
+**[Colin Rundel](http://www2.stat.duke.edu/~cr173/)** - Duke University
+
+Colin is an Assistant Professor of the Practice of Statistical Science at Duke 
+University. His research interests include applied spatial statistics with an 
+emphasis on Bayesian statistics and computational methods.
+
 ## Acknowledgements
 
-- Version control section is derived from Data Carpentry's  [Version Control via Git and Github](https://github.com/datacarpentry/rr-version-control) moduke.
-- ...
+- Version control section is derived from Data Carpentry's  [Version Control via Git and Github](https://github.com/datacarpentry/rr-version-control) module.
+- More to be added as materials develop...
