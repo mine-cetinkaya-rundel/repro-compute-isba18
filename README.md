@@ -28,8 +28,6 @@ Workshop attendees will work through several exercises and get first-hand experi
 | 15:30 - 16:00 | break :coffee:                          |       
 | 16:00 - 17:00 | Automation with make                    |    
 
-## Parts
-
 ### Literate programming and organization (9:00 - 10:30)
 
 - Recognize the problems that reproducible research helps address and identify 
