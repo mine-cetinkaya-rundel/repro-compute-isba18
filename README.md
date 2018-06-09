@@ -84,7 +84,7 @@ your research more reproducible.
 
 ## Instructors
 
-**[Mine Cetinkaya-Rundel](http://www2.stat.duke.edu/~mc301/)** - Duke University + RStudio
+**[Mine Çetinkaya-Rundel](http://www2.stat.duke.edu/~mc301/)** - Duke University + RStudio
 
 Mine is an Associate Professor of the Practice of Statistical Science at Duke 
 University and a Professional Educator at RStudio. Her work focuses on 
