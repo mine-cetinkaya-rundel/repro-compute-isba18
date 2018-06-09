@@ -21,11 +21,11 @@ Workshop attendees will work through several exercises and get first-hand experi
 | Time          | Activity                                |
 |:--------------|:----------------------------------------|
 | 9:00 - 10:30  | Literate programming and organization   |  
-| 10:10 - 11:00 | break :coffee:                          |       
+| 10:10 - 11:00 | :coffee:                                |       
 | 11:00 - 12:30 | Version control with Git and GitHub     |  
-| 12:30 - 14:00 | lunch :fork_and_knife:                  |               
+| 12:30 - 14:00 | :fork_and_knife:                        |               
 | 14:00 - 15:30 | Scaling reproducible projects           |    
-| 15:30 - 16:00 | break :coffee:                          |       
+| 15:30 - 16:00 | :coffee:                                |       
 | 16:00 - 17:00 | Automation with make                    |    
 
 ### Literate programming and organization (9:00 - 10:30)
