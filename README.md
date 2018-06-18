@@ -80,7 +80,34 @@ your research more reproducible.
 
 - Finish up hands-on exercise
 - Live demo of solution to exercise
+- Local installation
 - Q&A
+
+## Computing requirements
+
+- R - 3.5.0
+- RStudio - 1.2.707 or higher
+- git
+  - OSX - install Git for Mac by downloading and running the installer or install homebrew and use it to install git via brew install git.
+  - Unix / Linux - you should be able to install git via your prefered package manager (if it is not already installed).
+  - Windows - install Git for Windows by download and running the git for windows installer. This will provide you with git, the bash shell, and ssh in windows.
+- System libraries and development headers:
+  - jags
+  - geos
+  - gdal
+  - proj
+  - texlive
+- R packages:
+  - From CRAN:
+    - tidyverse
+    - rmarkdown
+    - shiny
+    - rjags
+    - rstan
+    - sf
+  - From github:
+    - tidybayes: https://github.com/mjskay/tidybayes
+    - ggplot2: https://github.com/tidyverse/ggplot2
 
 ## Instructors
 
