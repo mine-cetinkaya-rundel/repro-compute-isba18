@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Reproducible Computing   @ ISBA 2018</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Mine Çetinkaya-Rundel &amp; Colin Rundel" />
+    <meta name="date" content="2018-06-24" />
+    <link rel="stylesheet" href="../slides.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Reproducible Computing <br> @ ISBA 2018
+### Mine Çetinkaya-Rundel &amp; Colin Rundel
+### June 24, 2018
+
+---
+
+
+class: center, middle
+
+# Reproducible Computing
+
+---
+
+## Schedule
+
+| Time          | Activity                                |
+|:--------------|:----------------------------------------|
+| 9:00 - 10:30  | Literate programming and organization   |  
+| 10:10 - 11:00 | :coffee:                                |       
+| 11:00 - 12:30 | Version control with Git and GitHub     |  
+| 12:30 - 14:00 | :fork_and_knife:                        |               
+| 14:00 - 15:30 | Scaling reproducible projects           |    
+| 15:30 - 16:00 | :coffee:                                |       
+| 16:00 - 17:00 | Automation with make                    | 
+
+---
+
+class: center, middle
+
+# Reproducibility: who cares?
+
+---
+
+## Science retracts gay marriage paper without agreement of lead author
+
+- In May 2015 Science retracted a study of how canvassers can sway 
+people's opinions about gay marriage published just 5 months earlier.
+
+- Science Editor-in-Chief Marcia McNutt: Original survey data not made 
+available for independent reproduction of results. + Survey incentives 
+misrepresented. + Sponsorship statement false.
+
+- Two Berkeley grad students who attempted to replicate the study quickly 
+discovered that the data must have been faked.
+
+- Methods we'll discuss today can't prevent this, but they can make it 
+easier to discover issues.
+
+&lt;font size="3"&gt;Source: http://news.sciencemag.org/policy/2015/05/science-retracts-gay-marriage-paper-without-lead-author-s-consent&lt;/font&gt;
+
+---
+
+## Bad spreadsheet merge kills depression paper, quick fix resurrects it
+
+- **Original conclusion:** Lower levels of CSF IL-6 were associated with 
+current depression and with future depression [...].
+
+- **Revised conclusion:** Higher levels of CSF IL-6 and IL-8 were 
+associated with current depression [...].
+
+&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+&lt;font size="3"&gt;Source: http://retractionwatch.com/2014/07/01/bad-spreadsheet-merge-kills-depression-paper-quick-fix-resurrects-it/&lt;/font&gt;
+
+---
+
+## Divorce study felled by a coding error gets a second chance
+
+- **Original conclusion:** The risk of divorce in a heterosexual marriage increases when the wife falls ill, but not the husband. 
+
+- **Corrected conclusion:** Based on the corrected analysis, we conclude that there are not gender differences in the relationship between gender, pooled illness onset, and divorce.
+
+&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+&lt;font size="3"&gt;Source: http://retractionwatch.com/2015/09/10/divorce-study-felled-by-a-coding-error-gets-a-second-chance/#more-32151&lt;/font&gt;
+
+---
+
+## Divorce study retraction: Editor's note
+
+- "The research environment is fast-paced given the ethos to “publish or perish"."
+
+- "[...] research is becoming increasingly complex, with greater calls for transdisciplinary collaborations, “big data,” and more sophisticated research questions and methods [...] data sets often have multiple files that require merging, change the wording of questions over time, provide incomplete codebooks, and have unclear and sometimes duplicative variables."
+
+- "Given these issues, I would not be surprised if coding errors were fairly common [...]"
+
+&lt;br&gt;
+
+&lt;font size="3"&gt;Source: http://retractionwatch.com/2015/09/10/divorce-study-felled-by-a-coding-error-gets-a-second-chance/#more-32151&lt;/font&gt;
+
+---
+
+class: center, middle
+
+# Reproducibility: why should you care?
+
+---
+
+## Think back to every time...
+
+- The results in Table 1 don't seem to correspond to those in Figure 2.
+- In what order do I run these scripts?
+- Where did we get this data file?
+- Why did I omit those samples?
+- How did I make that figure?
+- "Your script is now giving an error."
+- "The attached is similar to the code we used."
+
+&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+&lt;font size="3"&gt;Source: Karl Broman&lt;/font&gt;
+
+---
+
+## No collaborators?
+
+&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+&gt;Your closest collaborator is you six months ago, &lt;br&gt;
+but you don’t reply to emails.
+&lt;br&gt;&lt;br&gt;
+&lt;font size="3"&gt;- Mark Holder&lt;/font&gt;
+
+&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+---
+
+class: center, middle
+
+# Reproducibility: how?
+
+---
+
+## Reproducibility checklist
+
+- Are the tables and figures reproducible from the code and data?
+- Does the code actually do what you think it does?
+- In addition to what was done, is it clear *why* it was done? (e.g., how 
+were parameter settings chosen?)
+- Can the code be used for other data?
+- Can you extend the code to do other things?
+
+---
+
+## Ambitious goal + many other concerns 
+
+We need an environment where
+
+- data, analysis, and results are tightly connected, or better yet, 
+inseparable
+
+- reproducibility is built in
+    + the original data remains untouched
+    + all data manipulations and analyses are inherently documented
+
+- documentation is human readable and syntax is minimal
+
+---
+
+## Toolkit
+
+&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+![toolkit](img/toolkit.png)
+
+&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+---
+
+## Roadmap
+
+1. Scriptability `\(\rightarrow\)` R
+
+2. Literate programming `\(\rightarrow\)` R Markdown
+
+3. Version control `\(\rightarrow\)` Git / GitHub
+
+4. Scaling and automating `\(\rightarrow\)` make
+
+---
+
+class: center, middle
+
+# Computing access
+
+---
+
+class: middle
+
+- Go to http://ec2-18-222-149-60.us-east-2.compute.amazonaws.com/
+- Log in with _______ [TO DO: ADD LOGIN INSTRUCTIONS]
+    </textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function() {
+  var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})();</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+  }
+});
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
