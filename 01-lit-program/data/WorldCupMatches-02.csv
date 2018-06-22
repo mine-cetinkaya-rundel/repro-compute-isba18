@@ -1,4 +1,4 @@
-Year,Datetime,Stage,Stadium,City,Home Team Name,Home Team Goals,Away Team Goals,Away Team Name,Win conditions,Attendance,Half-time Home Goals,Half-time Away Goals,Referee,Assistant 1,Assistant 2,RoundID,MatchID,Home Team Initials,Away Team Initials
+year,datetime,stage,stadium,city,home_team_name,home_team_goals,away_team_goals,away_team_name,win_conditions,attendance,half_time_home_goals,half_time_away_goals,referee,assistant_1,assistant_2,round_id,match_id,home_team_initials,away_team_initials
 2002,31 May 2002 - 20:30 ,Group A,Seoul World Cup Stadium,Seoul ,France,0,1,Senegal, ,62561,0,1,BUJSAIM Ali (UAE),ALTRAIFI Ali (KSA),RATTALINO Jorge (ARG),43950100,43950001,FRA,SEN
 2002,01 Jun 2002 - 18:00 ,Group A,Munsu Football Stadium,Ulsan ,Uruguay,1,2,Denmark, ,30157,0,1,MANE Saad (KUW),HASSOUNEH Awni (JOR),DANTE Dramane (MLI),43950100,43950003,URU,DEN
 2002,01 Jun 2002 - 15:30 ,Group E,Niigata Stadium Big Swan,Niigata ,"rn"">Republic of Ireland",1,1,Cameroon, ,33679,0,1,KAMIKAWA Toru (JPN),AWANG HAMAT Mat Lazim (MAS),VAN NYLEN Roland (BEL),43950100,43950002,IRL,CMR
