@@ -2,12 +2,12 @@
 
 ## Source
 
-WorldCupMatches.csv comes from https://www.kaggle.com/minecetinkayarundel/kernel4ccf73f2e3/edit.
+`WorldCupMatches.csv` comes from https://www.kaggle.com/minecetinkayarundel/kernel4ccf73f2e3/edit.
 
 ## Partial datasets
 
-- WorldCupMatches-01.csv - WorldCupMatches pre 2000
-- WorldCupMatches-02.csv - WorldCupMatches post 2000
+- `WorldCupMatches-01.csv` - WorldCupMatches pre 2000
+- `WorldCupMatches-02.csv` - WorldCupMatches post 2000
 
 ## Codebook
 
