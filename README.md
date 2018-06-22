@@ -97,6 +97,7 @@ your research more reproducible.
   - gdal
   - proj
   - texlive
+  - libudunits2-dev
 - R packages:
   - From CRAN:
     - tidyverse
