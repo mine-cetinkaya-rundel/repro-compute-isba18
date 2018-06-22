@@ -11,6 +11,8 @@ WorldCupMatches.csv comes from https://www.kaggle.com/minecetinkayarundel/kernel
 
 ## Codebook
 
+Variable name | Description | Type
+--------------|-------------|---------
 Year | The year in which the match was played | Numeric
 Datetime | The Date on which the match was played along with a 24 hour format time | DateTime
 Stage | The stage at which the match was played | String
