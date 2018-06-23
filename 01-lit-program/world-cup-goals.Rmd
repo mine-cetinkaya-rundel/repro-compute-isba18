@@ -7,7 +7,7 @@ output:
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = FALSE)
 ```
 
 ```{r load-pkg}
@@ -19,7 +19,7 @@ football-playing nations of the world. It is contested every four years, match
 data from each game is maintained on the FIFA World Cup Archive website.
 
 ```{r load-data}
-wc <- read_csv("data/WorldCupMatches.csv")
+wc <- read_csv("data/WorldCupMatches-01.csv")
 ```
 
 The figure below shows the total number of goals scored during world cup games 
@@ -33,7 +33,7 @@ wc_tots <- wc %>%
   summarise(total_goals_year = sum(total_goals))
 ```
 
-```{r}
+```{r plot-totals}
 ggplot(data = wc_tots, aes(x = year, y = total_goals_year)) +
     geom_point() +
     geom_line() +
