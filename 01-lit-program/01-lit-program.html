@@ -112,10 +112,58 @@ You got some data.
 - Ultimate goal: Visualize the total number of goals for each World Cup over time.
 
 .instructions[
-Open `world-cup-goals.Rmd`. Knit the document. Then, update the *yaml* with your information, and knit again.
+Open `world-cup-goals.Rmd`. Knit the document. Then, update the **yaml** with your information, and knit again.
 ]
 
 ---
+
+## The YAML
+
+YAML: Yet another Markdown language
+
+- Fields like `title`, `subtitle`, `author`, `date`
+- You can also change `output` formats: `html_document` for web authoring, 
+`github_document` for markdown document easily viewable on GitHub, 
+`pdf_document` for PDF (requires TeX), `word_document` for MS Word 
+(requires Word)
+- Can use inline R code in values (see `date`)
+
+---
+
+## Chunk options
+
+- Turn off messages with `message = FALSE`
+- Turn off warnings with `message = FALSE`
+- Hide code with `echo = FALSE`
+- Display error messages in document with `error = TRUE` (as opposed to stopping 
+render when errors occur `error = FALSE`, which is the default)
+- Set these per chunk or globally in a `setup` chunk on top of the document 
+with `knitr::opts_chunk$set(...)`
+
+&lt;br&gt;
+
+&lt;img src="img/chunk-opts.png" alt="markdown" style="width:900px"&gt;
+
+---
+
+## Tips
+
+- Make sure RStudio and the `rmarkdown` package (and its dependencies) are 
+up-to-date.
+
+--
+
+- Get rid of your `.Rprofile`, especially if you have anything in there relating 
+to `knitr`, `markdown`, `rmarkdown`, and RStudio.
+
+--
+
+- Set a global option for `error = TRUE` (or for a given chunk) so that your 
+document renders even when there are errors.
+
+--
+
+- Don’t try to change working directory within an R Markdown document. (If you do still decide to use setwd in a code chunk, beware that the new working directory will only apply to that specific code chunk, and any following code chunks will revert back to use the original working directory.)
     </textarea>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
 <script>var slideshow = remark.create({
