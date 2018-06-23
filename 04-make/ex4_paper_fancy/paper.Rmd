@@ -1,0 +1,33 @@
+---
+title: "Make Example"
+output: html_document
+---
+
+## Introduction
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam luctus mauris ut lorem lobortis, a sagittis turpis euismod. Nulla tincidunt tempor augue sed vestibulum. Quisque ac pellentesque ex. Phasellus sed tristique sapien, rutrum semper mi. Nunc faucibus orci quis massa volutpat, vel convallis eros faucibus. Fusce sodales sapien risus, a accumsan neque fermentum at. Nullam mattis orci vel massa fermentum tincidunt. Aliquam bibendum arcu eros. Mauris accumsan sapien malesuada, volutpat est in, vehicula elit. Etiam felis sem, sagittis vulputate condimentum ut, pulvinar et magna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In at elit eu augue faucibus lacinia. Nam at euismod arcu, a eleifend nibh.
+
+Proin sollicitudin laoreet felis, vitae ornare est interdum sit amet. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur vel dictum sem. Fusce nec nunc ornare, accumsan nunc pharetra, egestas magna. Praesent fringilla mi eu congue malesuada. Vestibulum tempor tempus sem eget lobortis.
+
+Duis turpis lectus, pulvinar vel dignissim ut, rutrum eget libero. Praesent at pretium justo, id maximus tortor. Vestibulum eu neque quis quam iaculis vulputate. Mauris in diam finibus, commodo libero ac, maximus magna. Ut eu odio fringilla, congue mauris eget, ultrices massa. Sed convallis tellus vitae dui pharetra, eget congue ante tincidunt. Phasellus a nisl velit. Fusce id placerat neque, a vulputate dolor. Aliquam at elit eget tortor pretium vulputate. Proin id eleifend est. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec aliquet tortor eget tortor dictum tincidunt. Quisque scelerisque mi eget blandit pharetra.
+
+## Results
+
+Ut commodo luctus tortor, sed consectetur odio viverra eu. Nam purus libero, iaculis in luctus accumsan, ultrices nec arcu. Duis ut est vel nisi mattis imperdiet id et elit. Nam dapibus, leo nec ultricies convallis, neque sem finibus sapien, ut tincidunt eros justo sed ante. Nam diam mi, fringilla in malesuada eget, dictum at lorem. Sed ac urna dignissim massa volutpat efficitur. Aenean lectus nisl, fringilla id facilisis nec, vehicula ultricies urna.
+
+```{r fig1, fig.align='center'}
+knitr::include_graphics("Fig1/fig.png")
+```
+
+Nulla laoreet scelerisque dolor lacinia blandit. Etiam pretium convallis condimentum. Sed laoreet, sapien et dapibus egestas, quam sem fermentum neque, eu vestibulum urna purus eu odio. Aliquam erat volutpat. Proin hendrerit euismod ex, non laoreet lorem pulvinar sed. Donec porttitor fermentum condimentum. Suspendisse potenti.
+
+```{r fig2, fig.align='center'}
+knitr::include_graphics("Fig2/fig.png")
+```
+
+In venenatis, urna non consequat tincidunt, lectus turpis commodo tellus, in fermentum diam leo sed ante. Proin ipsum elit, mollis ac bibendum id, vestibulum sit amet elit. Nullam congue interdum tellus, non vulputate arcu consequat et. Cras sed arcu quis magna pretium luctus. Duis suscipit eu ex eget euismod. Etiam eget lorem ultrices, pretium mi vel, accumsan nibh. Vivamus sem leo, varius vitae sapien ut, tempor commodo risus. Nunc odio nibh, malesuada quis hendrerit vel, posuere non risus. Fusce at rhoncus dolor. Nullam quis varius libero. In quis aliquam nisi. Praesent vulputate ornare ultricies. Vestibulum nec mattis purus.
+
+## Discussion
+
+Praesent in turpis in magna interdum imperdiet eu vel enim. Fusce eget sapien et justo commodo efficitur. Nunc finibus viverra euismod. Etiam dignissim ligula id sagittis egestas. Praesent ac mauris tortor. Mauris nisl magna, faucibus tristique imperdiet eget, commodo id augue. Nam auctor massa at nisi luctus, quis maximus magna iaculis. Duis ornare, elit vel posuere interdum, elit metus porttitor nisl, a feugiat nisl nisi in tortor. Etiam tincidunt, ipsum viverra mattis ornare, nisl est molestie turpis, non porta massa metus sit amet odio. Vivamus sed risus ac metus fringilla rhoncus.
+

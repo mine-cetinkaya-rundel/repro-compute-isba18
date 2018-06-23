@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Introduction to make</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Mine Çetinkaya-Rundel &amp; Colin Rundel" />
+    <meta name="date" content="2018-06-24" />
+    <link rel="stylesheet" href="../slides.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Introduction to make
+## Reproducible Computing <br> @ ISBA 2018
+### Mine Çetinkaya-Rundel &amp; Colin Rundel
+### June 24, 2018
+
+---
+
+exclude: true
+
+
+
+---
+
+## make
+
+* Automatically build software / libraries / documents by specifying dependencies
+
+* Originally created by Stuart Feldman in 1976 at Bell Labs
+
+* Almost universally available (all flavors of unix / linux / osx)
+
+---
+
+## Makefile basics
+
+A `Makefile` provides a list of targets and their dependencies. For each target you then specify the steps necessary to generate the target using the dependencies.
+
+```
+target1: depend1 depend2 depend3 ...
+    step1
+    step2
+    step3
+    ...
+
+depend1: other_depend
+    step1
+    step2
+```
+
+The targets and their dependencies must form a directed acyclic graph - which is how make evaluates what steps to run and in what order.
+
+---
+
+## Steps
+
+Steps are just one or more shell commands to be executed that will eventually generate the target.
+
+&lt;br/&gt;
+
+Some important features / requirements:
+
+* Steps *must* be prefixed with a tab character (not spaces)
+
+* Each step executes in its own shell, therefore commands that change state / environment (e.g. `cd`) will not necessarily persist.
+  
+  - The solution is to string commands together into a single step using `;` or `&amp;&amp;`.
+
+* To stop a step from echoing its command when running predix it with a `@`.
+
+---
+## Example 1 - Dependencies
+
+```make
+a: b c
+	@printf "Building a\n"
+
+b:
+	@printf "Building b\n"
+	
+c:
+	@printf "Building c\n"
+```
+
+---
+
+## Example 2 - Paper
+
+```make
+paper.html: paper.Rmd Fig1/fig.png Fig2/fig.png
+    Rscript -e "library(rmarkdown);render('paper.Rmd')"
+
+Fig1/fig.png: Fig1/fig.R
+    cd Fig1;Rscript fig.R
+
+Fig2/fig.png: Fig2/fig.R
+    cd Fig2;Rscript fig.R
+```
+
+---
+
+## Smart Execution
+
+Because the `Makefile` specifies the dependency structure and `make` knows when a file has changed (by examining the file's modification timestamp) it only runs the steps that depend on the file(s) that have changed.
+
+&lt;br/&gt;
+
+* After running `make` the first time, I edit `paper.Rmd`, what steps run if I run `make` again?
+
+* What if I edit `Fig1/fig.R`?
+
+* What if I rename `paper.html` to `paper2.html`
+
+---
+
+## Variables
+
+Like shell (or R) we can define variables 
+
+```make
+R_OPTS=--no-save --no-restore --no-site-file
+
+Fig1/fig.png: Fig1/fig.R
+  cd Fig1;Rscript $(R_OPTS) fig.R
+```
+
+---
+
+## Special Targets
+
+By default when running `make` without arguments it will attempt to build the **first** target in the `Makefile` (whose name does not start with a `.`). By convention we often include an `all` target as this first target, which explicitly specifies how to build everything within the project.
+
+--
+&lt;br/&gt;
+
+`all` is an example of what is called a phony target - because there is no `all` file in the directory. Other common phony targets:
+
+* clean - remove any files created by the Makefile, restores to the original state
+
+* install - for software packages, installs the compiled programs / libraries / headers
+
+--
+&lt;br/&gt;
+
+Any phony targets in a Makefile can be listed using the `.PHONY` special built-in target name,
+
+```make
+.PHONY: all clean install
+```
+
+---
+## Example 3 - Phony
+
+```make
+.PHONY: c
+
+a: b c
+	@printf "Building a\n"
+
+b:
+	@printf "Building b\n"
+	
+c:
+	@printf "Building c\n"
+```
+
+---
+
+## Builtin Variables
+
+* `$@` &amp;nbsp;&amp;nbsp; the file name of the target
+
+* `$&lt;` &amp;nbsp;&amp;nbsp; the name of the first dependency
+
+* `$^` &amp;nbsp;&amp;nbsp; the names of all dependencies
+
+* `$(@D)` &amp;nbsp;&amp;nbsp; the directory part of the target
+
+* `$(@F)` &amp;nbsp;&amp;nbsp; the file part of the target
+
+* `$(&lt;D)` &amp;nbsp;&amp;nbsp; the directory part of the first dependency
+
+* `$(&lt;F)` &amp;nbsp;&amp;nbsp; the file part of the first dependency
+
+---
+
+## Pattern Rules
+
+Often we want to build several files in the same way, in these cases we can use `%` as a special wildcard character to match both targets and dependencies.
+
+So we can go from
+
+```make
+Fig1/fig.png: Fig1/fig.R
+    cd R;Rscript fig.R
+
+Figs2/fig.png: Fig1/fig.R
+    cd R;Rscript fig.R
+```
+
+to
+
+```make
+Fig%/fig.png: Fig%/fig.R
+    cd $(&lt;D);Rscript $(&lt;F)
+```
+
+---
+
+## Example 4 - Paper (Fancy)
+
+```make
+all: paper.html
+
+paper.html: paper.Rmd Fig1/fig.png Fig2/fig.png
+    Rscript -e "library(rmarkdown);render('paper.Rmd')"
+
+Fig%/fig.png: Fig%/fig.R
+    cd $(&lt;D);Rscript $(&lt;F)
+
+clean:
+    rm -f paper.html
+    rm -f Fig*/*.png
+
+.PHONY: all clean
+```
+
+---
+
+## Further Reading / Reference
+
+* Mike Bostock - [Why use make](http://bost.ocks.org/mike/make/)
+
+* Karl Broman - [minimal make](http://kbroman.org/minimal_make/)
+
+* [GNU Manual](https://www.gnu.org/software/make/manual/make.html)
+
+* GitHub Code Search - [`filename:Makefile`](https://github.com/search?q=filename%3AMakefile)
+    </textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function() {
+  var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})();</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+  }
+});
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
