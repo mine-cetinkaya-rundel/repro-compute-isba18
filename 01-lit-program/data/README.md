@@ -7,6 +7,7 @@
 ## Partial datasets
 
 - `WorldCupMatches-01.csv` - WorldCupMatches pre 2000
+	- This dataset contains an intentionally placed data error. The number of `home_team_goals` in 1998 by Brazil should be 3, not 0.
 - `WorldCupMatches-02.csv` - WorldCupMatches post 2000
 
 ## Codebook
