@@ -129,15 +129,13 @@ YAML: Yet another Markdown language
 - Turn off messages with `message = FALSE`
 - Turn off warnings with `message = FALSE`
 - Hide code with `echo = FALSE`
-- Exclude chunk from doc with `include = FALSE`, which will prevent code and 
-results from appearing in the finished file. R Markdown still runs the code in 
-the chunk, and the results can be used by other chunks.
-- Display error messages in document with `error = TRUE` (as opposed to stopping 
-render when errors occur `error = FALSE`, which is the default)
+- Exclude chunk from doc with `include = FALSE` to prevent code and results from 
+appearing in the finished file. Code in the chunk will still be ran, and the 
+results can be used by other chunks.
+- Display error messages in document with `error = TRUE`, as opposed to stopping 
+render when errors occur `error = FALSE`, which is the default
 - Set these per chunk or globally in a `setup` chunk on top of the document 
 with `knitr::opts_chunk$set(...)`
-
-<br>
 
 <img src="img/chunk-opts.png" alt="markdown" style="width:900px">
 
