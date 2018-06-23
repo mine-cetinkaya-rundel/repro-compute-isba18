@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Literate Programming</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Mine Çetinkaya-Rundel &amp; Colin Rundel" />
+    <meta name="date" content="2018-06-24" />
+    <link rel="stylesheet" href="../slides.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Literate Programming
+## Reproducible Computing <br> @ ISBA 2018
+### Mine Çetinkaya-Rundel &amp; Colin Rundel
+### June 24, 2018
+
+---
+
+
+class: center, middle
+
+# Literate Programming
+
+---
+
+## Donald Knuth "Literate Programming (1983)"
+
+"Instead of imagining that our main task is to instruct a *computer* what 
+to do, let us concentrate rather on explaining to *human beings* what we 
+want a computer to do."
+
+"The practitioner of literate programming [...] strives for a program that 
+is comprehensible because its concepts have been introduced in an order 
+that is best for human understanding, using a mixture of formal and 
+informal methods that reinforce each other."
+
+- These ideas have been around for years!
+- And tools for putting them to practice have also been around
+- But they have never been as accessible as the current tools: R Markdown
+
+---
+
+## What is Markdown?
+
+- Markdown is a lightweight markup language for creating HTML (or XHTML) 
+documents.
+
+- Markup languages are designed to produce documents from human readable 
+text (and annotations).
+
+- Some of you may be familiar with LaTeX. This is another (less human 
+friendly) markup language for creating pdf documents.
+
+- Why I love Markdown:
+    + Simple syntax means easy to learn and use.
+    + Focus on **content**, rather than **coding** and debugging 
+    **errors**.
+    + Allows for easy web authoring.
+    + Once you have the basics down, you can get fancy and add HTML,
+    JavaScript, and CSS.
+
+---
+
+## Sample Markdown document
+
+&lt;img src="img/markdown.png" alt="markdown" style="width:900px"&gt;
+
+---
+
+## What is R Markdown?
+
+Well, it's R + Markdown:
+
+- Ease of Markdown syntax
+
+- Rendering of R code to produce output and plots
+
+- Ability to include LaTeX: `\(\hat{y} = \beta_0 + \beta_1 \times x\)`
+
+---
+
+## Sample R Markdown document
+
+&lt;img src="img/rmarkdown.png" alt="rmarkdown" style="width:1000px"&gt;
+
+---
+
+## Another R Markdown document
+
+&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+&lt;center&gt;
+This presentation!
+&lt;/center&gt;
+
+---
+
+class: center, middle
+
+# R Markdown
+
+---
+
+## It's your lucky day!
+
+You got some data.
+
+- `WorldCupMatches-01.csv`: Match info for each game in pre-2000 World Cups
+- Codebook at https://github.com/mine-cetinkaya-rundel/repro-compute-isba18/blob/master/01-lit-program/data/README.md#codebook
+- Ultimate goal: Visualize the total number of goals for each World Cup over time.
+
+.instructions[
+Open `world-cup-goals.Rmd`. Knit the document. Then, update the *yaml* with your information, and knit again.
+]
+
+---
+    </textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function() {
+  var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})();</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+  }
+});
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
