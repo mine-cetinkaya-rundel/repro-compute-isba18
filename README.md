@@ -22,13 +22,14 @@ Workshop attendees will work through several exercises and get first-hand experi
 |:--------------|:----------------------------------------|
 | 09:00 - 09:20 | [Welcome](https://htmlpreview.github.io/?https://github.com/mine-cetinkaya-rundel/repro-compute-isba18/blob/master/00-welcome/00-welcome.html)      |  
 | 09:20 - 10:30 | [Literate programming](https://htmlpreview.github.io/?https://github.com/mine-cetinkaya-rundel/repro-compute-isba18/blob/master/01-lit-program/01-lit-program.html)             |
-| 10:00 - 10:30 | Organization                            |  
-| 10:10 - 11:00 | *Coffee break*                          |       
-| 11:00 - 12:30 | Version control with Git and GitHub     |  
-| 12:30 - 14:00 | *Lunch break*                           |               
-| 14:00 - 15:30 | Scaling reproducible projects           |    
-| 15:30 - 16:00 | *Coffee break*                          |       
-| 16:00 - 17:00 | Automation with make                    |    
+| 10:00 - 10:30 | Organization                            |
+| 10:10 - 11:00 | *Coffee break*                          |
+| 11:00 - 12:30 | Version control with Git and GitHub     |
+| 12:30 - 14:00 | *Lunch break*                           |
+| 14:00 - 14:45 | Scaling reproducible projects           |
+| 14:45 - 15:30 | Introduction to make                    |
+| 15:30 - 16:00 | *Coffee break*                          |
+| 16:00 - 17:00 | make in action                          |
 
 ### Literate programming and organization (9:00 - 10:30)
 
@@ -64,19 +65,15 @@ your research more reproducible.
 
 ### Scaling reproducible projects (14:00 - 15:30)
 
-- Introduce the data: Scottish lip cancer
-- Demo R Markdown document with full analysis including EDA, model fitting with 
-`rstan`, trace plots, and predictive checks.
-  - Using chunk labels to identify R chunks that take a long time to run
+- Introduce example - Scottish lip cancer
+- Demo reproducible R Markdown document with full analysis including data munging, EDA, model fitting and analysis.
 - Caching as a solution to scaling
   - R Markdown caching: `cache = TRUE`
   - Build your own cache: Saving your own results with `save()` vs. `saveRDS()`
-  - Drawbacks of these approaches: not aware of when updated
 - Using make to automate and scale
   - Introduce make with a toy example of a paper
   - Review make syntax
-  - Hands on exercise: Translate the (more complex) R Markdown document on 
-  Scottish lip cancer into a project that uses make
+  - Hands on exercise: Translate the lip cancer R Markdown document into a project that uses make
 
 ### Automation with make (16:00 - 17:00)
 
@@ -88,18 +85,18 @@ your research more reproducible.
 ## Computing requirements
 
 - R - 3.5.0
-- RStudio - 1.2.707 or higher
+- [RStudio](https://www.rstudio.com/products/rstudio/download/preview/) - 1.2.707 or higher
 - git
   - OSX - install Git for Mac by downloading and running the installer or install homebrew and use it to install git via brew install git.
-  - Unix / Linux - you should be able to install git via your prefered package manager (if it is not already installed).
-  - Windows - install Git for Windows by download and running the git for windows installer. This will provide you with git, the bash shell, and ssh in windows.
-- System libraries and development headers:
+  - Unix / Linux - you should be able to install git via your prefered package manager (e.g. apt, dnf, yum).
+  - Windows - install [Git for Windows](https://gitforwindows.org/). This will provide you with git, the bash shell, and ssh in windows.
+- System libraries and packages (including development headers):
   - jags
   - geos
   - gdal
   - proj
   - texlive
-  - libudunits2-dev
+  - udunits2
 - R packages:
   - From CRAN:
     - tidyverse
