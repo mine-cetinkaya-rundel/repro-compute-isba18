@@ -20,7 +20,9 @@ Workshop attendees will work through several exercises and get first-hand experi
 
 | Time          | Activity                                |
 |:--------------|:----------------------------------------|
-| 9:00 - 10:30  | Literate programming and organization   |  
+| 09:00 - 09:20 | [Welcome](https://htmlpreview.github.io/?https://github.com/mine-cetinkaya-rundel/repro-compute-isba18/blob/master/00-welcome/00-welcome.html)      |  
+| 09:20 - 10:30 | [Literate programming](https://htmlpreview.github.io/?https://github.com/mine-cetinkaya-rundel/repro-compute-isba18/blob/master/01-lit-program/01-lit-program.html)             |
+| 10:00 - 10:30 | Organization                            |  
 | 10:10 - 11:00 | :coffee:                                |       
 | 11:00 - 12:30 | Version control with Git and GitHub     |  
 | 12:30 - 14:00 | :fork_and_knife:                        |               
