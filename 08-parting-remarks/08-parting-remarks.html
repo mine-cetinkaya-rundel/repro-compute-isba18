@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parting remarks</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Mine Çetinkaya-Rundel &amp; Colin Rundel" />
+    <meta name="date" content="2018-06-24" />
+    <link rel="stylesheet" href="../slides.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Parting remarks
+## Reproducible Computing <br> @ ISBA 2018
+### Mine Çetinkaya-Rundel &amp; Colin Rundel
+### June 24, 2018
+
+---
+
+
+## Reproducibility ladder
+
+Aim to go at least one step higher in your next project
+
+1. Bad
+2. Good
+3. Better
+4. Best
+
+---
+
+## R Markdown tips / resources
+
+- R Markdown cheatsheet: https://www.rstudio.com/resources/cheatsheets/
+- R Markdown document should be in your root directory
+- Do not set a working directory in our R Markdown document
+  - Actually, don't ever use `setwd()`
+  - See the `here` package for an alternative approach
+
+---
+
+## Difficult things
+
+There are only two hard things in Computer Science: cache invalidation and naming things. -- Phil Karlton
+
+---
+
+## Licensing your repository
+
+- Add a file called LICENSE.md
+- Select from the list
+- Think about commercial/non commercial, share alike/not
+
+---
+
+## GitHub pages
+
+It's pretty easy to convert your repo to a website!
+
+Go to Settings and then Enable GitHub pages
+
+---
+
+## GitHub as a search engine
+
+Use it to see how people write their `Makefile`s and how they use functions in a given language
+    </textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function() {
+  var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})();</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+  }
+});
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

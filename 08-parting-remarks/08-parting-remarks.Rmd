@@ -1,0 +1,61 @@
+---
+title: "Parting remarks"
+subtitle: "Reproducible Computing <br> @ ISBA 2018"
+author: "Mine Çetinkaya-Rundel & Colin Rundel"
+date: "June 24, 2018"
+output:
+  xaringan::moon_reader:
+    css: "../slides.css"
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+## Reproducibility ladder
+
+Aim to go at least one step higher in your next project
+
+1. Bad
+2. Good
+3. Better
+4. Best
+
+---
+
+## R Markdown tips / resources
+
+- R Markdown cheatsheet: https://www.rstudio.com/resources/cheatsheets/
+- R Markdown document should be in your root directory
+- Do not set a working directory in our R Markdown document
+  - Actually, don't ever use `setwd()`
+  - See the `here` package for an alternative approach
+
+---
+
+## Difficult things
+
+There are only two hard things in Computer Science: cache invalidation and naming things. -- Phil Karlton
+
+---
+
+## Licensing your repository
+
+- Add a file called LICENSE.md
+- Select from the list
+- Think about commercial/non commercial, share alike/not
+
+---
+
+## GitHub pages
+
+It's pretty easy to convert your repo to a website!
+
+Go to Settings and then Enable GitHub pages
+
+---
+
+## GitHub as a search engine
+
+Use it to see how people write their `Makefile`s and how they use functions in a given language
