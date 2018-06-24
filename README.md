@@ -32,21 +32,22 @@ Workshop attendees will work through several exercises and get first-hand experi
 | 15:30 - 16:00 | *Coffee break*                          |
 | 16:00 - 17:00 | make in action                          |
 
-### Literate programming and organization (9:00 - 10:30)
+### Welcome, literate programming, and naming (9:00 - 10:30)
 
 - Recognize the problems that reproducible research helps address and identify 
 pain points in getting your analysis to be reproducible.
 - The role of documentation, sharing, automation, and organization in making 
 your research more reproducible.
 - Literate programming with R Markdown
-  - Introduce the data: Gapminder
+  - Introduce the data: World Cup!
   - Hands on activity: Updating an analysis when the source data changes
+- Naming best practices
+
+### Organization and version control with Git and GitHub (11:00 - 12:30)
+
 - Project organization
   - File and folder organization for projects
   - Naming conventions
-
-### Version control with Git and GitHub (11:00 - 12:30)
-
 - What is Git and version control?
 - Git in GitHub
   - Define git vocabulary (commit, fork, pull request, repository, commit 
@@ -76,7 +77,7 @@ your research more reproducible.
   - Review make syntax
   - Introduce hands on exercise - adapt 
 
-### Hands on exercise + Q&A (16:00 - 17:00)
+### make in action + Q&A (16:00 - 17:00)
 
 - Finish up hands-on exercise + Live demo
 - Local installation
