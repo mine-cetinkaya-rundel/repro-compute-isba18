@@ -144,8 +144,7 @@ with `knitr::opts_chunk$set(...)`
 ## Not so lucky after all
 
 .instructions[
-Turns out there is an error in the data you received: The number of `home_team_goals` in 1998 by Brazil should be 3, not 0. Implement a fix and 
-redo the analysis.
+Turns out there is an error in the data you received: The number of `home_team_goals` in 1998 by Brazil (in the game vs. Denmark played on 03 Jul 1998) should be 3, not 0. Implement a fix and redo the analysis.
 ]
 
 ---
