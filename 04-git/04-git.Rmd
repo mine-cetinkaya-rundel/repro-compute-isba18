@@ -209,7 +209,7 @@ In this activity you are going to learn how to collaborate using Github.  With a
 -  A **repository** is a directory (folder) that houses both the files of a project AND the git history of the project.
 -  Once the repository is created you will be directed to the repository page which now has its own web address. 
 -  Each repository on Github has a unique url so you can easily share. 
--  The git history is a detailed history of all the changes made to that file.  One of the features of using Github is the ability to view your repository history which are displayed in the Graphs section of your Github repository page. 
+-  The git history is a detailed history of all the changes made to that folder  One of the features of using Github is the ability to view your repository history which are displayed in the Graphs section of your Github repository page. 
 -  At this point in the git history of your `work-organization-your-name` repository there is only one commit.
 
 ---
