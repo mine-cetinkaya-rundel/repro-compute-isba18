@@ -21,9 +21,9 @@ Workshop attendees will work through several exercises and get first-hand experi
 | Time          | Activity                                |
 |:--------------|:----------------------------------------|
 | 09:00 - 09:20 | [Welcome](https://htmlpreview.github.io/?https://github.com/mine-cetinkaya-rundel/repro-compute-isba18/blob/master/00-welcome/00-welcome.html)       |  
-| 09:20 - 10:30 | [Literate programming](https://htmlpreview.github.io/?https://github.com/mine-cetinkaya-rundel/repro-compute-isba18/blob/master/01-lit-program/01-lit-program.html)  |
+| 09:20 - 10:00 | [Literate programming](https://htmlpreview.github.io/?https://github.com/mine-cetinkaya-rundel/repro-compute-isba18/blob/master/01-lit-program/01-lit-program.html)  |
 | 10:00 - 10:30 | [Naming](https://htmlpreview.github.io/?https://github.com/mine-cetinkaya-rundel/repro-compute-isba18/blob/master/02-naming/02-naming.html)          |
-| 10:10 - 11:00 | *Coffee break*                          |
+| 10:30 - 11:00 | *Coffee break*                          |
 | 11:00 - 11:30 | [Organization](https://htmlpreview.github.io/?https://github.com/mine-cetinkaya-rundel/repro-compute-isba18/blob/master/03-organization/03-organization.html)        |
 | 11:00 - 12:30 | [Version control with Git and GitHub](https://htmlpreview.github.io/?https://github.com/mine-cetinkaya-rundel/repro-compute-isba18/blob/master/04-git/04-git.html) |
 | 12:30 - 14:00 | *Lunch break*                           |

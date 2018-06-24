@@ -160,7 +160,7 @@ car_model = "
     omega ~ multi_normal_prec(rep_vector(0, n), tau * (D - phi * W));
     beta ~ normal(0, 1);
     tau ~ gamma(2, 2);
-    y ~ poisson_log(log_offset + X * beta + phi);
+    y ~ poisson_log(log_offset + X * beta + omega);
   }
 "
 ```
