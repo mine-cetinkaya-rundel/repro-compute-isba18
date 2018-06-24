@@ -137,46 +137,7 @@ If you don't have a GitHub account
 - Shorter is better than longer.
 - Be as unique as possible in as few characters as possible. In some settings GitHub auto-completes or suggests usernames.
 - Make it timeless. Don’t highlight your current university, employer, or place of residence.
-- Avoid words laden with special meaning in programming. In my first inept efforts to script around the GitHub API.
-
----
-
-## Git config
-
-- Go to the Terminal pane
-
-- Type the following two lines of code, replacing the information in the quotation marks with your info:
-
-```shell
-git config --global user.email "your email"
-git config --global user.name "your name"
-```
-
-For example, for me these are
-
-```shell
-git config --global user.email "mine@stat.duke.edu"
-git config --global user.name "Mine Cetinkaya-Rundel"
-```
-
-To confirm that the changes have been implemented, run the following
-
-```shell
-git config --global user.email
-git config --global user.name
-```
-
----
-
-## Other useful git config options
-
-For certain operations GitHub will require that you authenticate, in order to avoid having to type your username and password repeatedly we can ask git to cache our credentials
-
-```shell
-git config --global credential.helper 'cache --timeout=600000'
-```
-
-This will cache your username password for 600,000 seconds, or ~1 week. This cacheing occurs only on the machine where this is set (and where authentication occured) and when using https based url.
+- Avoid words laden with special meaning in programming.
 
 ---
 
@@ -188,7 +149,6 @@ In this activity you are going to learn how to collaborate using Github.  With a
 2. Build `README.md` file 
 3. Commit changes to repository
 3. Collaborate by forking and editing partners file
-4. Explore Github features: graphs, diff, blame, ect.
 
 ---
 
@@ -196,11 +156,11 @@ In this activity you are going to learn how to collaborate using Github.  With a
 
 **Step 1**: First we are going to create a repository within our Github user account. 
 
-1. Go to your Github profile. The url should be [http://github.com/your-user-name]().
-2. Create a new Github repository, click the green "new" button, under the repositories tab.
-3. Name your repository `work-organization-your-name`
-4. In the details write "tips to organizing research".
-5. Click the initiate a `README.md file` option. 
+1. Go to your Github profile. The url should be `http://github/[your-user-name]`.
+2. Create a new Github repository, click the green "New" button, under the repositories tab.
+3. Name your repository `test-repo`.
+4. In the details write "Test repo for workshop".
+5. Check the initiate a `README.md file` option. 
 
 ---
 
@@ -210,19 +170,15 @@ In this activity you are going to learn how to collaborate using Github.  With a
 -  Once the repository is created you will be directed to the repository page which now has its own web address. 
 -  Each repository on Github has a unique url so you can easily share. 
 -  The git history is a detailed history of all the changes made to that folder  One of the features of using Github is the ability to view your repository history which are displayed in the Graphs section of your Github repository page. 
--  At this point in the git history of your `work-organization-your-name` repository there is only one commit.
+-  At this point in the git history of your `test-repo` repository there is only one commit.
 
 ---
 
 ## Edit the `README.md` file
 
-1.  Go back to the `work-organization-your-name` repository main page. Click on `README.md`, then click "edit this file". Add the following information into the `readme.md` file:
-    -  Name?
-    -  What kind of scientist do you you tell people you are at dinner parties?
-    -  In the past month, what are the three main activities you have been doing at work?
-    -  What are the three most important tools/strategies you use for organizing your work?
+1.  Go back to the `test-repo` repository main page. Click on `README.md`, then click "edit this file". Add some random text to the `README.md` file:
 
-*tip*:  Notice that you can use markdown syntax. Use [this guide](https://help.github.com/articles/markdown-basics/) for Github's flavor of Markdown. Use the "Preview" button to view the formatting of your readme.md file. 
+**Tip:**  Notice that you can use markdown syntax. Use [this guide](https://help.github.com/articles/markdown-basics/) for Github's flavor of Markdown. Use the "Preview" button to view the formatting of your readme.md file. 
 
 ---
 
@@ -243,7 +199,7 @@ Now it is time to collaborate with your partner.  Navigate to your partner's rep
 2. Make edits and commit 
 3. Create a pull request that merges your changes into their repository. 
 
-*tip*: Depending on the project there are variations on the above work flow. Often the rules for contributing to a project are outlined in a file called `CONTRIBUTING.md` within the repository. One of the more often used works flows is [Github Flow](https://guides.github.com/introduction/flow/). 
+**Tip:** Depending on the project there are variations on the above work flow. Often the rules for contributing to a project are outlined in a file called `CONTRIBUTING.md` within the repository. One of the more often used works flows is [Github Flow](https://guides.github.com/introduction/flow/). 
 
 ---
 
@@ -287,6 +243,45 @@ class: center, middle
 
 ---
 
+## Git config
+
+- Go to the Terminal pane
+
+- Type the following two lines of code, replacing the information in the quotation marks with your info:
+
+```shell
+git config --global user.email "your email"
+git config --global user.name "your name"
+```
+
+For example, for me these are
+
+```shell
+git config --global user.email "mine@stat.duke.edu"
+git config --global user.name "Mine Cetinkaya-Rundel"
+```
+
+To confirm that the changes have been implemented, run the following
+
+```shell
+git config --global user.email
+git config --global user.name
+```
+
+---
+
+## Other useful git config options
+
+For certain operations GitHub will require that you authenticate, in order to avoid having to type your username and password repeatedly we can ask git to cache our credentials
+
+```shell
+git config --global credential.helper 'cache --timeout=600000'
+```
+
+This will cache your username password for 600,000 seconds, or ~1 week. This cacheing occurs only on the machine where this is set (and where authentication occured) and when using https based url.
+
+---
+
 ## Follow along demo
 
 **Step 1:** Fork a repository. (Need inspiration? Fork this [one](https://github.com/rundel/repro-compute-isba18-demo).)
@@ -322,8 +317,8 @@ class: center, middle
 - Look at the name of the repo on the upper left corner, for your fork it will say:
 
 ~~~
-[your-github-name]/[repo-name]
-forked from Reproducible-Science-Curriculum/[repo-name]
+[your-github-name]/repro-compute-isba18-demo
+forked from rundel/repro-compute-isba18-demo
 ~~~
 
 ---
@@ -343,12 +338,23 @@ forked from Reproducible-Science-Curriculum/[repo-name]
         
 ---
 
+## What is .gitignore?
+
+Git uses this file to determine which files and directories to ignore, before you make a commit.
+
+---
+
 ## Step 3: Edit
 
 **Edit a file in this repository/project.**
 
----
+<br>
 
+1. Change the output to `github_document`
+2. Update the YAML with your information
+3. Add additional text, code, plot as you like
+
+---
 
 ## Step 4: Stage
 
@@ -402,20 +408,9 @@ File tracking:
 - The icon describes the change:
     + ![git-mod](img/rstudio-git-modified.png) **Modified:** You changed the contents of the file.
     + ![git-unt](img/rstudio-git-unknown.png) **Untracked:** You added a new file that Git hasn't seen before.
+    + ![git-del](img/rstudio-git-deleted.png) **Deleted:** You deleted a file.
 
-You can get more details about modifications with a ![git-unt](img/rstudio-git-diff.png):
+You can get more details about modifications with a ![git-diff](img/rstudio-git-diff.png):
 
 - Green: added text
 - Red: removed text
-
----
-
-## What's in my Git pane?
-
-- When you cloned your repo into an RStudio project you got two bonus files that weren't there before: `.gitignore` and `.[repo-name].Rproj`
-
-- They're both showing up as **untracked** since Git hasn't seen them before. You can stage, commit, and push those files to your repository.
-
-- `.[repo-name].Rproj`: This file maintains metadata on the R project.
-
-- `.gitignore`: Git uses this file to determine which files and directories to ignore, before you make a commit.
