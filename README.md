@@ -129,5 +129,5 @@ emphasis on Bayesian statistics and computational methods.
 
 ## Acknowledgements
 
-- Version control section is derived from Data Carpentry's  [Version Control via Git and Github](https://github.com/datacarpentry/rr-version-control) module.
-- More to be added as materials develop...
+- Naming, organization, and version control sections are derived from [Data Carpentry](https://github.com/datacarpentry)'s corresponding modules.
+- [Happy git with R](http://happygitwithr.com/) by [Jenny Bryan](http://github.com/jennybc).
