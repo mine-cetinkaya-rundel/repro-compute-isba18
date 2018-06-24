@@ -70,6 +70,8 @@ for(file in shapefiles) {
 
 ```r
 *d = sf::st_distance(lip_cancer %>% sf::st_set_crs(NA))
+class(d) = NULL
+
 W = (d == 0.0) * 1L
 
 m = rowSums(W)
@@ -113,6 +115,8 @@ For example, we can rewrite the `neighbors` code chunk as follows
 } else {
 *  d = readRDS("dist_mat.rds")
 }
+class(d) = NULL
+
 W = (d == 0.0) * 1L
 
 m = rowSums(W)

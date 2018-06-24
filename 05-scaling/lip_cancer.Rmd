@@ -96,6 +96,8 @@ lip_cancer %>% dplyr::transmute(Observed/Expected) %>% plot(asp=1, axes=TRUE)
 
 ```{r neighbors, echo=FALSE, warning=FALSE}
 d = sf::st_distance(lip_cancer)
+class(d) = NULL
+
 W = (d == 0.0) * 1L
 
 m = rowSums(W)
