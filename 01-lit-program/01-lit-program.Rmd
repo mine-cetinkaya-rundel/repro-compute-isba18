@@ -127,7 +127,7 @@ YAML: Yet another Markdown language
 ## Chunk options
 
 - Turn off messages with `message = FALSE`
-- Turn off warnings with `message = FALSE`
+- Turn off warnings with `warning = FALSE`
 - Hide code with `echo = FALSE`
 - Exclude chunk from doc with `include = FALSE` to prevent code and results from 
 appearing in the finished file. Code in the chunk will still be ran, and the 
