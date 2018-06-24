@@ -35,7 +35,7 @@ count: false
 
 ## The data
 
-```{r get-data,  include=FALSE}
+```{r get-data, include=FALSE}
 ## Get data
 datafile = "http://web1.sph.emory.edu/users/lwaller/book/ch2/scotland.dat"
 
@@ -95,7 +95,7 @@ lip_cancer %>% dplyr::transmute(Observed/Expected) %>% plot(asp=1, axes=TRUE)
 ---
 
 ```{r neighbors, echo=FALSE, warning=FALSE}
-d = sf::st_distance(lip_cancer %>% sf::st_set_crs(NA))
+d = sf::st_distance(lip_cancer)
 W = (d == 0.0) * 1L
 
 m = rowSums(W)
