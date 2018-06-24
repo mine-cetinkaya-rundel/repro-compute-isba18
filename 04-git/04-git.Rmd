@@ -196,7 +196,7 @@ In this activity you are going to learn how to collaborate using Github.  With a
 
 **Step 1**: First we are going to create a repository within our Github user account. 
 
-1. Go to your Github profile. The url should be [http://github/your-user-name]().
+1. Go to your Github profile. The url should be [http://github.com/your-user-name]().
 2. Create a new Github repository, click the green "new" button, under the repositories tab.
 3. Name your repository `work-organization-your-name`
 4. In the details write "tips to organizing research".
