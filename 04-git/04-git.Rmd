@@ -141,45 +141,6 @@ If you don't have a GitHub account
 
 ---
 
-## Git config
-
-- Go to the Terminal pane
-
-- Type the following two lines of code, replacing the information in the quotation marks with your info:
-
-```shell
-git config --global user.email "your email"
-git config --global user.name "your name"
-```
-
-For example, for me these are
-
-```shell
-git config --global user.email "mine@stat.duke.edu"
-git config --global user.name "Mine Cetinkaya-Rundel"
-```
-
-To confirm that the changes have been implemented, run the following
-
-```shell
-git config --global user.email
-git config --global user.name
-```
-
----
-
-## Other useful git config options
-
-For certain operations GitHub will require that you authenticate, in order to avoid having to type your username and password repeatedly we can ask git to cache our credentials
-
-```shell
-git config --global credential.helper 'cache --timeout=600000'
-```
-
-This will cache your username password for 600,000 seconds, or ~1 week. This cacheing occurs only on the machine where this is set (and where authentication occured) and when using https based url.
-
----
-
 ## Overview
 
 In this activity you are going to learn how to collaborate using Github.  With a partner you will learn some basics which allow you to share and edit files on Github. 
@@ -287,6 +248,45 @@ class: center, middle
 
 ---
 
+## Git config
+
+- Go to the Terminal pane
+
+- Type the following two lines of code, replacing the information in the quotation marks with your info:
+
+```shell
+git config --global user.email "your email"
+git config --global user.name "your name"
+```
+
+For example, for me these are
+
+```shell
+git config --global user.email "mine@stat.duke.edu"
+git config --global user.name "Mine Cetinkaya-Rundel"
+```
+
+To confirm that the changes have been implemented, run the following
+
+```shell
+git config --global user.email
+git config --global user.name
+```
+
+---
+
+## Other useful git config options
+
+For certain operations GitHub will require that you authenticate, in order to avoid having to type your username and password repeatedly we can ask git to cache our credentials
+
+```shell
+git config --global credential.helper 'cache --timeout=600000'
+```
+
+This will cache your username password for 600,000 seconds, or ~1 week. This cacheing occurs only on the machine where this is set (and where authentication occured) and when using https based url.
+
+---
+
 ## Follow along demo
 
 **Step 1:** Fork a repository. (Need inspiration? Fork this [one](https://github.com/rundel/repro-compute-isba18-demo).)
@@ -322,8 +322,8 @@ class: center, middle
 - Look at the name of the repo on the upper left corner, for your fork it will say:
 
 ~~~
-[your-github-name]/[repo-name]
-forked from Reproducible-Science-Curriculum/[repo-name]
+[your-github-name]/repro-compute-isba18-demo
+forked from rundel/repro-compute-isba18-demo
 ~~~
 
 ---
@@ -343,12 +343,24 @@ forked from Reproducible-Science-Curriculum/[repo-name]
         
 ---
 
+
+## What is .gitignore?
+
+Git uses this file to determine which files and directories to ignore, before you make a commit.
+
+---
+
 ## Step 3: Edit
 
 **Edit a file in this repository/project.**
 
----
+<br>
 
+1. Change the output to `github_document`
+2. Update the YAML with your information
+3. Add additional text, code, plot as you like
+
+---
 
 ## Step 4: Stage
 
@@ -402,20 +414,9 @@ File tracking:
 - The icon describes the change:
     + ![git-mod](img/rstudio-git-modified.png) **Modified:** You changed the contents of the file.
     + ![git-unt](img/rstudio-git-unknown.png) **Untracked:** You added a new file that Git hasn't seen before.
+    + ![git-del](img/rstudio-git-deleted.png) **Deleted:** You deleted a file.
 
-You can get more details about modifications with a ![git-unt](img/rstudio-git-diff.png):
+You can get more details about modifications with a ![git-diff](img/rstudio-git-diff.png):
 
 - Green: added text
 - Red: removed text
-
----
-
-## What's in my Git pane?
-
-- When you cloned your repo into an RStudio project you got two bonus files that weren't there before: `.gitignore` and `.[repo-name].Rproj`
-
-- They're both showing up as **untracked** since Git hasn't seen them before. You can stage, commit, and push those files to your repository.
-
-- `.[repo-name].Rproj`: This file maintains metadata on the R project.
-
-- `.gitignore`: Git uses this file to determine which files and directories to ignore, before you make a commit.
