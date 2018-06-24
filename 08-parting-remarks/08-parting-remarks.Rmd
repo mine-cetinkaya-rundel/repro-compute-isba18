@@ -13,6 +13,14 @@ output:
       countIncrementalSlides: false
 ---
 
+
+## We did some difficult stuff today...
+
+>There are only two hard things in Computer Science: cache invalidation and naming things.  
+-- Phil Karlton
+
+---
+
 ## Reproducibility ladder
 
 Aim to go at least one step higher in your next project
@@ -28,35 +36,27 @@ Aim to go at least one step higher in your next project
 
 - R Markdown cheatsheet: https://www.rstudio.com/resources/cheatsheets/
 - R Markdown document should be in your root directory
-- Do not set a working directory in our R Markdown document
+- Do not set a working directory in your R Markdown document
   - Actually, don't ever use `setwd()`
   - See the `here` package for an alternative approach
 
 ---
 
-## Difficult things
+## GitHub tips / resources
 
-There are only two hard things in Computer Science: cache invalidation and naming things. -- Phil Karlton
-
----
-
-## Licensing your repository
-
-- Add a file called LICENSE.md
-- Select from the list
-- Think about commercial/non commercial, share alike/not
-- See https://choosealicense.com/ for help with picking a license
+- It's pretty easy to convert your repo to a website
+  - Go to Settings and then Enable GitHub pages
+- You can use GitHub as a search engine to see how people write their `Makefile`s and how they use functions in a given language
+- You can add a license to your repo upon creation or later by adding a file called LICENSE.md
+  - GitHub provides you a list to select licenses from
+  - Think about commercial/non commercial, share alike/not
+  - See https://choosealicense.com/ for help with picking a license
+- [Happy Git with R](http://happygitwithr.com/) by [Jenny Bryan](http://github.com/jennybc)
 
 ---
 
-## GitHub pages
+## Make tips and resources
 
-It's pretty easy to convert your repo to a website!
-
-Go to Settings and then Enable GitHub pages
-
----
-
-## GitHub as a search engine
-
-Use it to see how people write their `Makefile`s and how they use functions in a given language
+- Some projects you can outline well initially and start with a Makefile
+- Others you'll want to start working in an R Markdown document and then break it up into pieces and use Make o put everything back together
+- Thinking about the folder structures we discussed in the organization will help
