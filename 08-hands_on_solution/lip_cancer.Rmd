@@ -1,0 +1,119 @@
+---
+title: Example - Scottish Lip Cancer
+author: "Mine Çetinkaya-Rundel & Colin Rundel"
+date: "June 24, 2018"
+output:
+  xaringan::moon_reader:
+    css: "../slides.css"
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+exclude: true
+
+```{r setup, include=FALSE}
+options(width = 80, tibble.width = 80)
+
+knitr::opts_chunk$set(
+  fig.align = "center"
+)
+
+library(magrittr)
+library(ggplot2)
+library(Rcpp)
+library(sf)
+```
+
+---
+
+## The data
+
+
+```{r print-data}
+lip_cancer = readRDS("results/lip_cancer.rds")
+lip_cancer
+```
+
+---
+class: middle
+
+.pull-left[
+```{r plot-obs, echo=FALSE, warning=FALSE}
+lip_cancer %>% dplyr::transmute(log(Observed)) %>% plot(asp=1, breaks=seq(0,5,0.5), axes=TRUE)
+```
+]
+
+.pull-right[
+```{r plot-exp, echo=FALSE}
+lip_cancer %>% dplyr::transmute(log(Expected)) %>% plot(asp=1, breaks=seq(0,5,0.5), axes=TRUE)
+```
+]
+
+---
+class: middle
+
+```{r plot-obs-exp, echo=FALSE}
+lip_cancer %>% dplyr::transmute(Observed/Expected) %>% plot(asp=1, axes=TRUE)
+```
+
+---
+
+```{r neighbors, echo=FALSE, warning=FALSE}
+m = readRDS("results/m.rds")
+W = readRDS("results/W.rds")
+
+lip_cancer$n_neighbors = m
+
+plot(lip_cancer[,"n_neighbors"], asp=1, axes=TRUE)
+```
+
+---
+
+## A hierachical model for lip cancer 
+
+We have observed counts of lip cancer for 56 districts in Scotland. Let $y_i$ represent the number of lip cancer for district $i$.
+
+\begin{aligned}
+y_i &\sim \text{Poisson}(\lambda_i) \\
+\\
+\log(\lambda_i) &= \log(E_i) + x_i \beta + \omega_i \\
+\\
+\boldsymbol{\omega} &\sim \mathcal{N}(\boldsymbol{0},~[\tau(\boldsymbol{D}-\phi\,\boldsymbol{W})]^{-1})
+\end{aligned}
+
+
+where $E_i$ is the expected counts for each region (and serves as an offet) and the parameters of the CAR are defined as follows:
+
+* $\tau$ is the spatial precision,
+* $D = \mathit{diag}(\boldsymbol{m})$, where $\{m\}_i = $ number of neighbors of location i,
+* $\phi$ is the spatial "smoothness" parameter, bounded between [0,1),
+* $W$ is the adjacency matrix for all locations.
+
+
+.footnote[
+*We have based the above and following off of Max Joseph's Exact sparse CAR models in Stan which is available [here](http://mc-stan.org/users/documentation/case-studies/mbjoseph-CARStan.html).*
+]
+
+---
+
+## A stan model
+
+```{r stan-model}
+cat(readLines("models/car_model.stan",warn = FALSE), sep="\n")
+```
+
+---
+
+```{r stan-params, echo=FALSE}
+full_fit = readRDS("results/car_fit.rds")
+print(full_fit, pars = c('beta', 'tau', 'phi', 'lp__'))
+```
+
+---
+
+```{r stan-traceplots, fig.width=12}
+rstan::traceplot(full_fit, pars = c('beta', 'tau', 'phi', 'lp__'))
+```
+
