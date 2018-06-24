@@ -188,5 +188,5 @@ inseparable
 
 ## Computing access
 
-- Go to http://colorado.rstudio.com/rsc/classroom-assignment/
+- Go to http://bit.ly/repro-compute-server
 - Use your assigned number to generate your server access
