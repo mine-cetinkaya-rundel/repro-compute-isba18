@@ -289,7 +289,7 @@ class: center, middle
 
 ## Follow along demo
 
-**Step 1:** Fork a repository. (Need inspiration? Fork this one.)
+**Step 1:** Fork a repository. (Need inspiration? Fork this [one](https://github.com/rundel/repro-compute-isba18-demo).)
 
 **Step 2:** Clone your forked repository to obtain a local copy of the files into an RStudio project.
 
