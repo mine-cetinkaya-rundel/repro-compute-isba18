@@ -141,6 +141,33 @@ If you don't have a GitHub account
 
 ---
 
+## Git config
+
+- Go to the Terminal pane
+
+- Type the following two lines of code, replacing the information in the quotation marks with your info:
+
+~~~
+git config --global user.email "your email"
+git config --global user.name "your name"
+~~~
+
+For example, for me these are
+
+~~~
+git config --global user.email "mine@stat.duke.edu"
+git config --global user.name "Mine Cetinkaya-Rundel"
+~~~
+
+To confirm that the changes have been implemented, run the following
+
+~~~
+git config --global user.email
+git config --global user.name
+~~~
+
+---
+
 ## Overview
 
 In this activity you are going to learn how to collaborate using Github.  With a partner you will learn some basics which allow you to share and edit files on Github. 
