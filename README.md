@@ -26,8 +26,7 @@ Workshop attendees will work through several exercises and get first-hand experi
 | 10:10 - 11:00 | *Coffee break*                          |
 | 11:00 - 12:30 | Version control with Git and GitHub     |
 | 12:30 - 14:00 | *Lunch break*                           |
-| 14:00 - 14:45 | Scaling reproducible projects           |
-| 14:45 - 15:30 | Introduction to make                    |
+| 14:00 - 15:30 | Scaling reproducible projects + Make    |
 | 15:30 - 16:00 | *Coffee break*                          |
 | 16:00 - 17:00 | make in action                          |
 
@@ -63,22 +62,21 @@ your research more reproducible.
   - Push local repository from RStudio to Github.
   - Demonstrate the ability to host code from RStudio to Github.
 
-### Scaling reproducible projects (14:00 - 15:30)
+### Scaling reproducible projects + Make (14:00 - 15:30)
 
-- Introduce example - Scottish lip cancer
-- Demo reproducible R Markdown document with full analysis including data munging, EDA, model fitting and analysis.
+- Practical example - Scottish lip cancer
+  - Reproducible R Markdown document with "full Bayesian analysis" including data munging, EDA, model fitting and analysis.
 - Caching as a solution to scaling
-  - R Markdown caching: `cache = TRUE`
   - Build your own cache: Saving your own results with `save()` vs. `saveRDS()`
+  - R Markdown caching: `cache = TRUE`
 - Using make to automate and scale
-  - Introduce make with a toy example of a paper
+  - Introduce make
   - Review make syntax
-  - Hands on exercise: Translate the lip cancer R Markdown document into a project that uses make
+  - Introduce hands on exercise - adapt 
 
-### Automation with make (16:00 - 17:00)
+### Hands on exercise + Q&A (16:00 - 17:00)
 
-- Finish up hands-on exercise
-- Live demo of solution to exercise
+- Finish up hands-on exercise + Live demo
 - Local installation
 - Q&A
 
