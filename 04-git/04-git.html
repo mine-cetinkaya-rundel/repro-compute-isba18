@@ -244,7 +244,148 @@ Now it is time to collaborate with your partner.  Navigate to your partner's rep
 1.  Make sure you are in your copy of your partner's repository by looking at the url - your user name should preface the repository name.  
 2.  Click the green "New Pull Request" button. You will get an overview of the changes you made to the repository. 
 3.  Click the "Create a Pull Request" button to continue the pull request. Your partner will now get a notification of a pull request on their main repository, as will you if your partner made changes. 
-4.  Go ahead and accept this pull request.
+4.  Go ahead and accept this pull request. 
+
+---
+
+class: center, middle
+
+# Git in RStudio
+
+---
+
+## Follow along demo
+
+**Step 1:** Fork a repository. (Need inspiration? Fork this one.)
+
+**Step 2:** Clone your forked repository to obtain a local copy of the files into an RStudio project.
+
+**Step 3:** Edit a file in this repository/project.
+
+**Step 4:** Stage your changes to be committed.
+
+**Step 5:** View the diff, and commit your changes, with a commit message.
+
+**Step 6:** Push your changes to your own fork of the the `rr-version-control-demo` GitHub repository.
+
+---
+
+## Step 1: Fork
+
+**Fork a repository.**
+
+&lt;br&gt;
+
+1. Go to a repository.
+2. Click on Fork (on the top right corner).
+
+---
+
+## Aside: Where am I?
+
+**How can I tell if I am looking at my fork or the original repository?**
+
+- Look at the URL.
+- Look at the name of the repo on the upper left corner, for your fork it will say:
+
+~~~
+[your-github-name]/[repo-name]
+forked from Reproducible-Science-Curriculum/[repo-name]
+~~~
+
+---
+
+## Step 2: Clone
+
+**Clone your forked repository to obtain a local copy of the files .**
+
+&lt;br&gt;
+
+1. In RStudio, go to File, and then New Project
+2. Click on *Version Control: Checkout a project from a version control repository*
+3. Click on *Git: Clone a project from a repository*
+4. Fill in the info:
+    - URL: use HTTPS address
+    - Create as a subdirectory of: Browse to where you would like to create this folder
+        
+---
+
+## Step 3: Edit
+
+**Edit a file in this repository/project.**
+
+---
+
+
+## Step 4: Stage
+
+**Stage your changes to be committed.**
+
+&lt;br&gt;
+
+1. Go to the Git pane in RStudio.
+2. Stage the changes for the changed file(s) by checking the boxes next to then, and hit Commit.
+
+&lt;br&gt;&lt;br&gt;
+
+---
+
+## Step 5: Commit
+
+**View the diff, and commit your changes, with a commit message.**
+
+&lt;br&gt;
+
+1. In the pop-up window view the *diff* for the Rmd file. You can view it for the HTML file as well if you like.
+2. Enter an **informative** commit message, like "Changed analysis year to X", and hit Commit.
+
+---
+
+## Step 6: Push
+
+**Push your changes to your own fork of the the GitHub repository.**
+
+**push**: When using git push always means pushing commits from your local respository (your computer) to a remote repository (Github).
+
+&lt;br&gt;
+
+1. Now push your changes to GitHub by hitting Push.
+2. Enter login information as needed.
+
+---
+
+class: center, middle
+
+# Other day one essentials
+
+---
+
+## More info on the Git pane
+
+File tracking:
+
+- The RStudio Git pane lists every file that’s been added, modified or deleted. 
+
+- The icon describes the change:
+    + ![git-mod](img/rstudio-git-modified.png) **Modified:** You changed the contents of the file.
+    + ![git-unt](img/rstudio-git-unknown.png) **Untracked:** You added a new file that Git hasn't seen before.
+
+You can get more details about modifications with a ![git-unt](img/rstudio-git-diff.png):
+
+- Green: added text
+- Red: removed text
+
+---
+
+## What's in my Git pane?
+
+- When you cloned your repo into an RStudio project you got two bonus files that weren't there before: `.gitignore` and `.[repo-name].Rproj`
+
+- They're both showing up as **untracked** since Git hasn't seen them before. You can stage, commit, and push those files to your repository.
+
+- `.[repo-name].Rproj`: This file maintains metadata on the R project.
+
+- `.gitignore`: Git uses this file to determine which files and directories to ignore, before you make a commit.
     </textarea>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
 <script>var slideshow = remark.create({
