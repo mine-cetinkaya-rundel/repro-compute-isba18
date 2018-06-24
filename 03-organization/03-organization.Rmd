@@ -45,7 +45,7 @@ class: center, middle
 
 ---
 
-## Raw data $\rightarrow$ data
+## Raw data to data
 
 Pick a strategy, any strategy, just pick one!
 
@@ -62,7 +62,7 @@ data/
 
 ---
 
-## Data $\rightarrow$ results
+## Data to results
 
 Pick a strategy, any strategy, just pick one!
 
@@ -78,25 +78,6 @@ bin
 
 ---
 
-## Data $\rightarrow$ results
-
-Pick a strategy, any strategy, just pick one!
-
-~~~
-figures
-results
-
-results/
-  - figs
-  - nums
-
-figures
-tables
-~~~
-</div>
-
----
-
 ## There is no one formula
 
 that will work for all projects, but use an organization that will allow
@@ -109,7 +90,7 @@ that will work for all projects, but use an organization that will allow
 
 ## Tips
 
-- Use a `from_joe` directory: Suppose your collaborator and data producer is Joe. Just leave these in this directory and copy or symlink as needed and record this in the project README.
+- Use a `from_joe` directory: Suppose your collaborator and data producer is Joe. Just leave communucation and files from Joe in this directory and copy or symlink as needed and record this in the project README.
 --
 
 - Give yourself less rope: Revoke write permission to the raw data file.
@@ -125,4 +106,4 @@ that will work for all projects, but use an organization that will allow
   - fix, clean, marshal the data into ready-to-analyze form
   - visualize it some more
   - fit a model or whatever and write lots of numerical results to file
-  - make tables and many figures based on the data & results accumulated by this point
+  - make tables and figures based on the data & results accumulated by this point
