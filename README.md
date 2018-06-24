@@ -131,3 +131,7 @@ emphasis on Bayesian statistics and computational methods.
 
 - Naming, organization, and version control sections are derived from [Data Carpentry](https://github.com/datacarpentry)'s corresponding modules.
 - [Happy git with R](http://happygitwithr.com/) by [Jenny Bryan](http://github.com/jennybc).
+
+## License
+
+Materials in this repository are licensed under [CC Attribution 4.0 International](LICENSE.md).
