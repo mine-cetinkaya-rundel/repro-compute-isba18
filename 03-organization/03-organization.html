@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Organization</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Mine Çetinkaya-Rundel &amp; Colin Rundel" />
+    <meta name="date" content="2018-06-24" />
+    <link rel="stylesheet" href="../slides.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Organization
+## Reproducible Computing <br> @ ISBA 2018
+### Mine Çetinkaya-Rundel &amp; Colin Rundel
+### June 24, 2018
+
+---
+
+
+## Face it
+
+- There are going to be files
+
+- LOTS of files
+
+- The files will change over time
+
+- The files will have relationships to each other
+
+- It'll probably get complicated
+
+---
+
+## Mighty weapon
+
+- File organization and naming is a mighty weapon against chaos
+
+- Make a file's name and location VERY INFORMATIVE about what it is, why it exists, how it relates to other things
+
+- The more things are self-explanatory, the better
+
+- READMEs are great, but don't document something if you could just make that thing self-documenting by definition
+
+---
+
+class: center, middle
+
+# Organizing your data analysis workflow
+
+---
+
+## Raw data `\(\rightarrow\)` data
+
+Pick a strategy, any strategy, just pick one!
+
+~~~
+data
+
+data-raw
+data-clean
+
+data/
+  - raw
+  - clean
+~~~
+
+---
+
+## Data `\(\rightarrow\)` results
+
+Pick a strategy, any strategy, just pick one!
+
+~~~
+code
+
+scripts
+
+analysis
+
+bin
+~~~
+
+---
+
+## Data `\(\rightarrow\)` results
+
+Pick a strategy, any strategy, just pick one!
+
+~~~
+figures
+results
+
+results/
+  - figs
+  - nums
+
+figures
+tables
+~~~
+&lt;/div&gt;
+
+---
+
+## There is no one formula
+
+that will work for all projects, but use an organization that will allow
+
+- you to come back to the project a year later and resume work fairly quickly
+
+- your collaborators to figure out what you did and decided and what files they need to look at
+
+---
+
+## Tips
+
+- Use a `from_joe` directory: Suppose your collaborator and data producer is Joe. Just leave these in this directory and copy or symlink as needed and record this in the project README.
+--
+
+- Give yourself less rope: Revoke write permission to the raw data file.
+--
+
+- Use a directory for communication that doesn't have to follow naming guidelines
+--
+
+- Keep the life cycle of data in mind
+  - get raw data
+  - explore, describe and visualize it
+  - diagnose what this data needs to become useful
+  - fix, clean, marshal the data into ready-to-analyze form
+  - visualize it some more
+  - fit a model or whatever and write lots of numerical results to file
+  - make tables and many figures based on the data &amp; results accumulated by this point
+    </textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function() {
+  var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})();</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+  }
+});
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

@@ -1,0 +1,128 @@
+---
+title: "Organization"
+subtitle: "Reproducible Computing <br> @ ISBA 2018"
+author: "Mine Çetinkaya-Rundel & Colin Rundel"
+date: "June 24, 2018"
+output:
+  xaringan::moon_reader:
+    css: "../slides.css"
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+## Face it
+
+- There are going to be files
+
+- LOTS of files
+
+- The files will change over time
+
+- The files will have relationships to each other
+
+- It'll probably get complicated
+
+---
+
+## Mighty weapon
+
+- File organization and naming is a mighty weapon against chaos
+
+- Make a file's name and location VERY INFORMATIVE about what it is, why it exists, how it relates to other things
+
+- The more things are self-explanatory, the better
+
+- READMEs are great, but don't document something if you could just make that thing self-documenting by definition
+
+---
+
+class: center, middle
+
+# Organizing your data analysis workflow
+
+---
+
+## Raw data $\rightarrow$ data
+
+Pick a strategy, any strategy, just pick one!
+
+~~~
+data
+
+data-raw
+data-clean
+
+data/
+  - raw
+  - clean
+~~~
+
+---
+
+## Data $\rightarrow$ results
+
+Pick a strategy, any strategy, just pick one!
+
+~~~
+code
+
+scripts
+
+analysis
+
+bin
+~~~
+
+---
+
+## Data $\rightarrow$ results
+
+Pick a strategy, any strategy, just pick one!
+
+~~~
+figures
+results
+
+results/
+  - figs
+  - nums
+
+figures
+tables
+~~~
+</div>
+
+---
+
+## There is no one formula
+
+that will work for all projects, but use an organization that will allow
+
+- you to come back to the project a year later and resume work fairly quickly
+
+- your collaborators to figure out what you did and decided and what files they need to look at
+
+---
+
+## Tips
+
+- Use a `from_joe` directory: Suppose your collaborator and data producer is Joe. Just leave these in this directory and copy or symlink as needed and record this in the project README.
+--
+
+- Give yourself less rope: Revoke write permission to the raw data file.
+--
+
+- Use a directory for communication that doesn't have to follow naming guidelines
+--
+
+- Keep the life cycle of data in mind
+  - get raw data
+  - explore, describe and visualize it
+  - diagnose what this data needs to become useful
+  - fix, clean, marshal the data into ready-to-analyze form
+  - visualize it some more
+  - fit a model or whatever and write lots of numerical results to file
+  - make tables and many figures based on the data & results accumulated by this point
