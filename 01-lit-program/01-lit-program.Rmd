@@ -141,6 +141,24 @@ with `knitr::opts_chunk$set(...)`
 
 ---
 
+## Not so lucky after all
+
+.instructions[
+Turns out there is an error in the data you received: The number of `home_team_goals` in 1998 by Brazil should be 3, not 0. Implement a fix and 
+redo the analysis.
+]
+
+---
+
+## More data!
+
+.instructions[
+And now you received more data: World Cup matches post-2000. The data are in
+`data/WorldCupMatches-02.csv`. Redo the analysis combining data from both files.
+]
+
+---
+
 ## Tips
 
 - Make sure RStudio and the `rmarkdown` package (and its dependencies) are 
@@ -159,4 +177,5 @@ document renders even when there are errors.
 --
 
 - Don’t try to change working directory within an R Markdown document. (If you do still decide to use setwd in a code chunk, beware that the new working directory will only apply to that specific code chunk, and any following code chunks will revert back to use the original working directory.)
+
 
