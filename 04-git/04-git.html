@@ -153,24 +153,36 @@ If you don't have a GitHub account
 
 - Type the following two lines of code, replacing the information in the quotation marks with your info:
 
-~~~
+```shell
 git config --global user.email "your email"
 git config --global user.name "your name"
-~~~
+```
 
 For example, for me these are
 
-~~~
+```shell
 git config --global user.email "mine@stat.duke.edu"
 git config --global user.name "Mine Cetinkaya-Rundel"
-~~~
+```
 
 To confirm that the changes have been implemented, run the following
 
-~~~
+```shell
 git config --global user.email
 git config --global user.name
-~~~
+```
+
+---
+
+## Other useful git config options
+
+For certain operations GitHub will require that you authenticate, in order to avoid having to type your username and password repeatedly we can ask git to cache our credentials
+
+```shell
+git config --global credential.helper 'cache --timeout=600000'
+```
+
+This will cache your username password for 600,000 seconds, or ~1 week. This cacheing occurs only on the machine where this is set (and where authentication occured) and when using https based url.
 
 ---
 
