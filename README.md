@@ -25,7 +25,7 @@ Workshop attendees will work through several exercises and get first-hand experi
 | 10:00 - 10:30 | [Naming](https://htmlpreview.github.io/?https://github.com/mine-cetinkaya-rundel/repro-compute-isba18/blob/master/02-naming/02-naming.html)          |
 | 10:10 - 11:00 | *Coffee break*                          |
 | 11:00 - 11:30 | [Organization](https://htmlpreview.github.io/?https://github.com/mine-cetinkaya-rundel/repro-compute-isba18/blob/master/03-organization/03-organization.html)        |
-| 11:00 - 12:30 | [Version control with Git and GitHub]() |
+| 11:00 - 12:30 | [Version control with Git and GitHub](https://htmlpreview.github.io/?https://github.com/mine-cetinkaya-rundel/repro-compute-isba18/blob/master/04-git/04-git.html) |
 | 12:30 - 14:00 | *Lunch break*                           |
 | 14:00 - 14:45 | [Scaling reproducible projects](https://htmlpreview.github.io/?https://github.com/mine-cetinkaya-rundel/repro-compute-isba18/blob/master/05-scaling/05-scaling.html)                         |
 | 14:40 - 15:30 | [Introduction to make](https://htmlpreview.github.io/?https://github.com/mine-cetinkaya-rundel/repro-compute-isba18/blob/master/06-make/06-make.html)                                   |
