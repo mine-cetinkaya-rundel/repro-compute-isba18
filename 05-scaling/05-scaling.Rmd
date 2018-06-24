@@ -108,7 +108,7 @@ For example, we can rewrite the `neighbors` code chunk as follows
 
 ```r
 *if (!file.exists("dist_mat.rds")) {
-  d = sf::st_distance(lip_cancer %>% sf::st_set_crs(NA))
+  d = sf::st_distance(lip_cancer)
 *  saveRDS(d, "dist_mat.rds")
 } else {
 *  d = readRDS("dist_mat.rds")
